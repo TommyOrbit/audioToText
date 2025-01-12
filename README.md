@@ -38,4 +38,4 @@ Use -h to get full help or, even better, run 'man ffmpeg'
 
 ## 使用
 將兩個程式與音檔或影片放到同個目錄
-若音檔或影片不為mp3, mp4，先執行convert.py後，再執行main.py
+若音檔或影片為mp3, mp4，先執行convert.py後，再執行main.py
