@@ -1,9 +1,15 @@
 import pydub as pd
+import os
+import glob
 
-def convert_to_wav(file_path):
-    sound = pd.AudioSegment.from_file(file_path)
-    sound.export(file_path + '.wav', format='wav')
+file_dir = 'source/'
+extension_list = ('*.mp4', '*.flv', '*.mp3')
+def convert_to_wav(dir):
+    os.chdir(dir)
+    for extension in extension_list:
+        for file in glob.glob(extension):
+            wav_filename = os.path.splitext(os.path.basename(file))[0] + '.wav'
+            pd.AudioSegment.from_file(file).export(wav_filename, format='wav')
 
-file_path = 'ai.mp4'
 
-convert_to_wav(file_path)
+convert_to_wav(file_dir)
