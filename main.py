@@ -2,7 +2,7 @@ import speech_recognition as sr
 import os
 import glob
 
-file_dir = 'source/'
+file_dir = './'
 extension_list = ("*.wav", " ")
 
 def speech_to_text():

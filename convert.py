@@ -2,7 +2,7 @@ import pydub as pd
 import os
 import glob
 
-file_dir = 'source/'
+file_dir = './'
 extension_list = ('*.mp4', '*.flv', '*.mp3')
 def convert_to_wav(dir):
     os.chdir(dir)
